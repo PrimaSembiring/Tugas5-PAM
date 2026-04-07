@@ -33,7 +33,7 @@ fun ProfileSection(
         Image(
             painter = painterResource(id = R.drawable.profile),
             contentDescription = "Profile Photo",
-            contentScale = ContentScale.Crop, // 🔥 BALIK KE INI
+            contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(110.dp)
                 .clip(CircleShape)
