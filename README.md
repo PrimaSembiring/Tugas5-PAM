@@ -75,4 +75,4 @@ Aplikasi menggunakan pendekatan sederhana berbasis:
 
 ## Demo Aplikasi
 
-https://github.com/USERNAME/REPO-NAME/blob/main/assets/Screen_recording.webm
+[![Demo App](assets/notes_screen.png)](assets/Screen_recording.webm)
