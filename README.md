@@ -71,4 +71,8 @@ Aplikasi menggunakan pendekatan sederhana berbasis:
 ### Favorites
 ![Favorites](assets/favorites_screen.png)
 
+--- 
 
+## Demo Aplikasi
+
+https://github.com/USERNAME/REPO-NAME/blob/main/assets/Screen_recording.webm
