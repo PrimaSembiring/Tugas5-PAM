@@ -75,4 +75,4 @@ Aplikasi menggunakan pendekatan sederhana berbasis:
 
 ## Demo Aplikasi
 
-[![Demo App](assets/notes_screen.png)](assets/Screen_recording.webm)
+link : https://drive.google.com/drive/folders/11Nk7rrM-vq69Mc3k7pmna5UQYG3KThDx?usp=sharing
