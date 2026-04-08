@@ -57,3 +57,18 @@ Aplikasi menggunakan pendekatan sederhana berbasis:
 
 ---
 
+## Dokumentasi Aplikasi
+
+### Halaman Notes
+![Notes Screen](assets/notes_screen.png)
+
+### Tambah Note
+![Add Note](assets/add_note_screen.png)
+
+### Edit Note
+![Edit Note](assets/edit_note_screen.png)
+
+### Favorites
+![Favorites](assets/favorites_screen.png)
+
+
