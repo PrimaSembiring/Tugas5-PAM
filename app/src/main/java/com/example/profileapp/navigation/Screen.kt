@@ -12,4 +12,8 @@ sealed class Screen(val route: String) {
 
     object AddNote : Screen("add_note")
     object Favorites : Screen("favorites")
+
+    object EditNote : Screen("edit_note/{noteId}") {
+        fun createRoute(noteId: Int) = "edit_note/$noteId"
+    }
 }

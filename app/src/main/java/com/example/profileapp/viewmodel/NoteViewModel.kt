@@ -28,4 +28,18 @@ class NoteViewModel : ViewModel() {
     fun getNoteById(id: Int): Note? {
         return _notes.value.find { it.id == id }
     }
+
+    fun updateNote(id: Int, title: String, content: String) {
+        _notes.value = _notes.value.map {
+            if (it.id == id) it.copy(title = title, content = content)
+            else it
+        }
+    }
+
+    fun toggleFavorite(id: Int) {
+        _notes.value = _notes.value.map {
+            if (it.id == id) it.copy(isFavorite = !it.isFavorite)
+            else it
+        }
+    }
 }

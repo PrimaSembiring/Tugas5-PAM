@@ -5,23 +5,21 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.profileapp.viewmodel.NoteViewModel
 
 @Composable
 fun NoteDetailScreen(
     noteId: Int,
+    viewModel: NoteViewModel,
     onBack: () -> Unit,
-    viewModel: NoteViewModel = viewModel()
+    onEdit: (Int) -> Unit
 ) {
 
     val note = viewModel.getNoteById(noteId)
 
-    Column(
-        modifier = Modifier.padding(16.dp)
-    ) {
+    Column(Modifier.padding(16.dp)) {
 
-        Text(note?.title ?: "Note tidak ditemukan")
+        Text(note?.title ?: "Not Found")
 
         Spacer(modifier = Modifier.height(10.dp))
 
@@ -29,8 +27,14 @@ fun NoteDetailScreen(
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Button(onClick = onBack) {
-            Text("Kembali")
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Button(onClick = onBack) {
+                Text("Kembali")
+            }
+
+            Button(onClick = { onEdit(noteId) }) {
+                Text("Edit")
+            }
         }
     }
 }

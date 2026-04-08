@@ -9,17 +9,20 @@ import com.example.profileapp.viewmodel.NoteViewModel
 import com.example.profileapp.ui.components.MyTextField
 
 @Composable
-fun AddNoteScreen(
+fun EditNoteScreen(
+    noteId: Int,
     viewModel: NoteViewModel,
     onBack: () -> Unit
 ) {
 
-    var title by remember { mutableStateOf("") }
-    var content by remember { mutableStateOf("") }
+    val note = viewModel.getNoteById(noteId)
 
-    Column(modifier = Modifier.padding(16.dp)) {
+    var title by remember { mutableStateOf(note?.title ?: "") }
+    var content by remember { mutableStateOf(note?.content ?: "") }
 
-        Text("Tambah Note")
+    Column(Modifier.padding(16.dp)) {
+
+        Text("Edit Note")
 
         MyTextField(title, { title = it }, "Judul")
 
@@ -30,10 +33,10 @@ fun AddNoteScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(onClick = {
-            viewModel.addNote(title, content)
+            viewModel.updateNote(noteId, title, content)
             onBack()
         }) {
-            Text("Simpan")
+            Text("Update")
         }
     }
 }
